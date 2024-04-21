@@ -6,7 +6,7 @@ public class Follower : MonoBehaviour
     [SerializeField] private Transform _target;
 
     private Rigidbody _rigidbody;
-    private float _speedOfFollowing = 40f;
+    private float _speedOfFollowing = 4f;
     private float _offsetDistance = 5f;
 
     private void Awake()
@@ -14,7 +14,7 @@ public class Follower : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Move();
     }
@@ -27,7 +27,7 @@ public class Follower : MonoBehaviour
 
         if (CloseToTarget() == false)
         {
-            _rigidbody.MovePosition(transform.position + force * Time.deltaTime);
+            _rigidbody.MovePosition(transform.position + force * Time.fixedDeltaTime);
         }
     }
 

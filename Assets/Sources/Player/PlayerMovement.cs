@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
-    private float _moveSpeed = 5f;
+    private float _moveSpeed = 6f;
     private float _jumpSpeed = 7f;
     private float _rotationSpeed = 1f;
 
