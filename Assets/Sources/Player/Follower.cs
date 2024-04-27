@@ -35,13 +35,6 @@ public class Follower : MonoBehaviour
     {
         float lengthOfDifference = (_target.position - transform.position).magnitude;
 
-        if (lengthOfDifference < _offsetDistance)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return lengthOfDifference < _offsetDistance;
     }
 }
